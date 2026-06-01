@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Donation Portal Bangladesh</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Blood Donation Portal</h1>
+  <p>Donate Blood, Save Lives in Bangladesh</p>
+</header>
+
+<nav>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('register')">Be a Donor</button>
+  <button onclick="showSection('find')">Find Donor</button>
+  <button onclick="showSection('login')">Login</button>
+  <button onclick="showSection('profile')">Profile</button>
+</nav>
+
+<section id="home" class="section active">
+  <h2>Why Blood Donation is Important</h2>
+  <p>Blood donation saves millions of lives every year. One donation can help up to 3 people.</p>
+  <p>In Bangladesh, emergency blood need is very high. Your donation matters.</p>
+</section>
+
+<section id="register" class="section">
+  <h2>Be a Donor</h2>
+  <input id="r_name" placeholder="Full Name">
+  <input id="r_location" placeholder="Location (Dhaka, Chittagong etc)">
+  <input id="r_phone" placeholder="Emergency Number">
+  <input id="r_email" placeholder="Email">
+  <input id="r_password" type="password" placeholder="Password">
+  <input id="r_blood" placeholder="Blood Group (A+, B-, O+ etc)">
+  <input id="r_lastdonate" type="date">
+  <button onclick="registerDonor()">Register</button>
+</section>
+
+<section id="find" class="section">
+  <h2>Find Donor</h2>
+  <input id="f_location" placeholder="Location">
+  <input id="f_blood" placeholder="Blood Group">
+  <button onclick="findDonor()">Search</button>
+  <div id="results"></div>
+</section>
+
+<section id="login" class="section">
+  <h2>Login</h2>
+  <input id="l_email" placeholder="Email">
+  <input id="l_password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</section>
+
+<section id="profile" class="section">
+  <h2>Profile</h2>
+  <input type="file" id="p_image">
+  <button onclick="uploadPic()">Upload Picture</button>
+  <div id="profileData"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
